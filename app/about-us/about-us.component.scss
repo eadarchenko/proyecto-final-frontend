@@ -1,0 +1,88 @@
+/*:root {
+    --facebook: background-color: rgb(44, 0, 165);
+    --instagram: background-color: rgb(184, 20, 175);
+    --telegram: background-color: rgb(71, 144, 255);
+}
+ no puedp con las variables porque me da cascazo... pero seria así:
+  background: var(--facebook);
+    background: var(--instagram);
+    background: var(--telegram);*/
+
+img {
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+li {
+    text-decoration: none;
+}
+
+.texto {
+    background-color: rgb(145, 147, 150);
+    font-weight: 400;
+}
+
+.contacto {
+    background-color: rgb(145, 147, 150);
+}
+
+.divtexto {
+    padding: 2rem;
+}
+
+.redes-container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.redes-container ul li {
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.redes-container ul li a {
+    display: block;
+    padding: 0 10px;
+    background: rgb(255, 255, 255);
+    color: rgb(7, 7, 7);
+    line-height: 50px;
+    font-size: 18px;
+    box-shadow: 0 3px 5px 0px rgb(82, 81, 81);
+    transition: .2s;
+}
+
+.redes-container ul:hover a {
+    filter: blur(2px);
+}
+
+.redes-container ul li a:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 5px 0px rgb(71, 71, 71);
+    filter: none;
+}
+
+.redes-container ul li .facebook:hover {
+    background-color: rgb(25, 0, 138);
+}
+
+.redes-container ul li .instagram:hover {
+    background-color: rgb(184, 20, 175);
+}
+
+.redes-container ul li .telegram:hover {
+    background-color: rgb(71, 144, 255);
+}

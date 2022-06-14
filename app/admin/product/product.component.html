@@ -1,0 +1,26 @@
+<app-admin-panel></app-admin-panel>
+<div class="container">
+    <h1>Artículo</h1>
+    <a href="#" routerLink="../admin-productCreate" class="btn btn-success">Crear un nuevo artículo</a>
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Introduction</th>
+            <th>Price</th>
+            <th width="220px">Action</th>
+        </tr>
+        <tr *ngFor="let prod of product">
+            <td>{{ prod.id }}</td>
+            <td>{{ prod.title }}</td>
+            <td>{{ prod.description}}</td>
+            <td>{{ prod.introduction}}</td>
+            <td>{{ prod.price}}</td>
+            <td>
+                <button mat-button routerLink="../admin-productEdit"><mat-icon>edit</mat-icon></button>
+                <button mat-button><mat-icon>delete</mat-icon></button>
+            </td>
+        </tr>
+    </table>
+</div>

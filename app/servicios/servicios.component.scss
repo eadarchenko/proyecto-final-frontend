@@ -1,0 +1,48 @@
+@import '~@angular/material/theming';
+$custom-typography: mat-typography-config( $font-family: "Gill Sans");
+mat-card {
+    margin: 2em auto;
+    text-align: center;
+}
+
+mat-form-field {
+    display: block;
+}
+
+mat-card {
+    float: right;
+    margin-bottom: 10rem;
+}
+
+article {
+    width: 90%;
+    display: block;
+    margin-right: 4rem;
+    font-family: "Gill Sans", sans-serif;
+}
+
+figure img {
+    width: 450px;
+}
+
+mat-card-title {
+    text-align: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    background-color: rgb(244, 244, 244);
+}
+
+.house {
+    max-width: 450px;
+    background-color: rgb(255, 255, 255);
+}
+
+.box {
+    width: 400px;
+    height: 550px;
+    background-color: rgb(255, 255, 255);
+}

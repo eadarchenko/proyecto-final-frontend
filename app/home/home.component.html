@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+
+<div>
+    <h1>Hemp House Building</h1>
+    <h2>Es el momento de tener tu casa ecológica!</h2>
+</div>
+<owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide>
+        <img src="../../assets/img/casa2.jpg" alt="Random first slide">
+    </ng-template>
+    <ng-template carouselSlide>
+        <img src="../../assets/img/casa3.jpg" alt=" Random second slide ">
+    </ng-template>
+    <ng-template carouselSlide>
+        <img src="../../assets//img/casa4.jpg" alt="Random third slide ">
+    </ng-template>
+    <ng-template carouselSlide>
+        <img src="../../assets/img/casa5.jpg" alt="Random third slide ">
+    </ng-template>
+    <ng-template carouselSlide>
+        <img src="../../assets/img/casa6.jpg" alt="Random third slide ">
+    </ng-template>
+</owl-carousel-o>
+<div>
+
+    <button mat-raised-button color="basic" (click)="goBlog()">Saber más!</button> </div>
+<app-footer></app-footer>

@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+
+<body>
+    <div class="wrapper">
+        <mat-card class="house">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Servicios de consultoría</mat-card-title>
+                <mat-card-subtitle>En Hemp House Building tenemos todo lo qu necesitas para tu construcción ecologica</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="../../assets/img/consultas.jpg">
+            <mat-card-content>
+                <p>Su paquete de HHB Consulting incluirá una lista de trabajos completados para identificar las áreas que deben abordarse. Informe sobre el trabajo del proceso en cuanto a mano de obra y materiales para el trabajo. Se pueden investigar los
+                    métodos de entrega más eficientes y el equipo especializado necesario para el proyecto. Y todas estas importantes comunicaciones y discusiones entre los profesionales involucrados en el proyecto </p>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="box">
+            <mat-card-header>
+                <mat-card-title>
+                    <h1>¿Tienes alguna duda? ¿Necesitas alguno de nuestros servicios?</h1><br>
+                    <h2>¡Contacta con nosotros!</h2>
+                </mat-card-title>
+            </mat-card-header>
+            <form class="example-form">
+                <mat-card-content>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Nombre">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Número de teléfono">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Email">
+                    </mat-form-field>
+                    <h4>Elige tu provincia</h4>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Provincias</mat-label>
+                        <mat-select>
+                            <mat-option>None</mat-option>
+                            <mat-option *ngFor="let city of cities" [value]="city">{{city}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <button mat-stroked-button color="basic" class="btn-block" (click)="servSubmit(servicios.value)">Contactar</button>
+                </mat-card-content>
+            </form>
+        </mat-card>
+    </div>
+    <app-footer></app-footer>
+</body>

@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(206, 203, 203);
+}
+
+mat-card {
+    max-width: 400px;
+    // margin-top: 5rem;
+    // margin-left: 35rem;
+    margin: 3rem auto;
+    margin-top: 3rem;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+mat-form-field {
+    display: block;
+}
+
+.btn-block {
+    margin: 2rem;
+}

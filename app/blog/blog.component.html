@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+
+<body><br>
+    <h1>OS CONTAMOS SOBRE LA CONSTRUCCIÓN DE VIVIENDAS CON CÁÑAMO</h1><br>
+    <div class="principal">
+        <ul>
+            <li *ngFor="let artic of articulosg">
+                <a>
+                    <div class="text">
+                        <h1> <strong> {{ artic.title }}</strong></h1>
+                    </div><br>
+                    <img [src]="artic.photo"><br>
+                    <div class="content">
+                        <div class="text">
+                            {{ artic.content }}
+                        </div><br>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div><br>
+
+    <h2><strong>PREGUNTAS FRECUENTES</strong></h2><br>
+    <div class="expansion" *ngFor="let art of article">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>{{ art.title }}</mat-panel-title>
+            </mat-expansion-panel-header>
+            <div>{{ art.content }}</div>
+        </mat-expansion-panel>
+    </div><br>
+    <app-footer></app-footer>
+</body>
