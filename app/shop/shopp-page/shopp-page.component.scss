@@ -1,0 +1,38 @@
+mat-card {
+    width: 50%;
+    height: 40%;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+ul li a {
+    height: 27rem;
+    width: 22rem;
+    border: 3px solid whitesmoke;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: black;
+    border: 2px solid grey;
+    text-decoration: none;
+}
+
+li a:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.principal {
+    background-color: whitesmoke;
+}

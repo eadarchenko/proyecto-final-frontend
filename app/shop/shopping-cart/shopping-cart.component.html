@@ -1,0 +1,89 @@
+<app-navbar></app-navbar>
+<div class="empty" *ngIf="items.length < 1">
+    <div class="info ">
+        <img class="cart-empty" src="../../../assets/img/empty-cart-png-Transparent-Images.png"><br>
+        <button mat-button routerLink="../shop-page">Ir a comprar</button>
+    </div>
+</div>
+<ng-container *ngIf="items.length > 0">
+    <mat-horizontal-stepper linear>
+        <mat-step label="Revisar carrito" completed="true">
+            <div class="cart-item">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Imagen</td>
+                            <td>Producto</td>
+                            <td>Cantidad</td>
+                            <td>Precio por unidad</td>
+                            <td>Acción</td>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let item of items">
+                        <tr>
+                            <td><img [src]="item.photo1"></td>
+                            <td>{{ item.title }}</td>
+                            <td>
+                                <app-btnplusminus [(counter)]="someValue"></app-btnplusminus>
+                            </td>
+                            <td>{{ item.price }}</td>
+                            <td>
+                                <button (click)=" deleteItem(item.id)" mat-button> <mat-icon>delete</mat-icon></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p> Cantidad : {{ someValue }} </p><br>
+                <p> Total a pagar :{{ totalPrice() }}€</p>
+
+            </div>
+            <div>
+                <button mat-button routerLink="../shop-page">Volver a comprar</button>
+                <button mat-button matStepperNext>Delante</button>
+            </div>
+        </mat-step>
+        <mat-step label="Dirección de envió" completed="true">
+            <h4> Rellene el formulario de envio</h4>
+            <form [formGroup]="myForm">
+                <mat-card-content>
+                    <mat-form-field>
+                        <input matInput type="text" placeholder="Enter Name" formControlName="myName" id="myName">
+                        <mat-hint align="end">Not more then 20 characters long.</mat-hint>
+                        <mat-error *ngIf="myError('myName', 'required')">Name is required</mat-error>
+                        <mat-error *ngIf="myError('myName', 'maxlength')">Limit exceed</mat-error>
+                    </mat-form-field>
+                </mat-card-content>
+                <br />
+                <mat-card-content>
+                    <mat-form-field>
+                        <input matInput type="text" placeholder="Enter Address" formControlName="myAddress" id="myAddress">
+                        <mat-hint align="end">Not more then 150 characters long.</mat-hint>
+                        <mat-error *ngIf="myError('myAddress', 'required')">Address is required</mat-error>
+                        <mat-error *ngIf="myError('myAddress', 'maxlength')">Limit exceed</mat-error>
+                    </mat-form-field>
+                </mat-card-content>
+                <br/>
+                <mat-card-content>
+                    <mat-form-field>
+                        <input matInput type="text" placeholder="Enter City" formControlName="mycity" id="myAddress">
+                        <mat-hint align="end">Not more then 50 characters long.</mat-hint>
+                        <mat-error *ngIf="myError('mycity', 'required')">City is required</mat-error>
+                        <mat-error *ngIf="myError('mycity', 'maxlength')">Limit exceed</mat-error>
+                    </mat-form-field>
+                </mat-card-content>
+            </form>
+            <div>
+                <button mat-button matStepperPrevious>Atras</button>
+                <button mat-button matStepperNext>Delante</button>
+            </div>
+        </mat-step>
+        <mat-step label="Gracias por su compra">
+            <div class="fin">
+                <h2 class="mat-display-3">¡Gracias por su compra!</h2>
+                <img src="../../../assets/img/order-complete.png" alt="Compra terminada">
+                <p>Su paquete llegará a la dirección especificada en los siguientes días</p>
+            </div>
+        </mat-step>
+    </mat-horizontal-stepper>
+</ng-container>
+<app-footer></app-footer>

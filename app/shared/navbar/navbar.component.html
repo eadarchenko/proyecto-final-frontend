@@ -1,0 +1,16 @@
+<mat-toolbar>
+    <img src="../../../assets/img/logohhb-removebg-preview.png">
+    <span><strong>HEMP HOUSE BUILDING  </strong></span>
+    <button mat-button color="basic" (click)="gotoHome()">Inicio</button>
+    <button mat-button color="basic" (click)="gotoServic()">Servicios de Consultoría</button>
+    <button mat-button color="basic" (click)="gotoShopPage()">Tienda</button>
+    <button mat-button color="basic" (click)="gotoBlog()">Blog</button>
+    <button mat-button color="basic" (click)="gotoAboutUs()">Sobre Nosotros</button>
+    <button mat-button (click)="gotoLogin()">
+      <mat-icon>person</mat-icon>
+    </button>
+    <button mat-button (click)="gotoShopp()">
+    <mat-icon>shopping_cart</mat-icon>
+    {{ itemCount() }}
+  </button>
+</mat-toolbar>

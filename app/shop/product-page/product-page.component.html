@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div class="content">
+    <mat-grid-list cols="2" rowHeight="2:1" *ngIf="product">
+        <p class="titulo"> <strong>{{ product.title }}</strong></p>
+
+        <mat-grid-tile>
+            <div class="imagenes">
+                <img mat-card-image [src]="product.photo1">
+            </div>
+            <div>
+                <img mat-card-image [src]="product.photo2">
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="descripcion">
+                <p>{{ product.description }}</p><br>
+                <p>{{ product.introduction }}</p><br>
+
+                <button mat-button [routerLink]="'/shop-page'">Volver a la página anterior</button>
+                <button mat-button (click)="addToCart(product)">Comprar</button>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+<app-footer></app-footer>

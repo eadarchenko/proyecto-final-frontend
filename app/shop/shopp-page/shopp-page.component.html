@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<div class="principal">
+    <ul>
+        <li *ngFor="let product of products">
+            <a [title]="product.title + ' details'" [routerLink]="['/products',product.id]">
+                <img [src]="product.photo1">
+                <div class="content">
+                    <div class="text">
+                        {{ product.title }}
+                    </div><br>
+                    <div class="text">
+                        Precio: {{ product.price }}€
+                    </div><br>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<app-footer></app-footer>
