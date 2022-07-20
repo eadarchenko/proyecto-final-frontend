@@ -12,7 +12,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class ShoppingCartComponent implements OnInit {
 
-  someValue = 0;
+  someValue = 1;
   i = 1
   total = 0;
   items = this.cartService.getItems();
