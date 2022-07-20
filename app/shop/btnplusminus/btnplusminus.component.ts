@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class BtnplusminusComponent implements OnInit {
 
    i=1;
-  counterValue = 0;
+  counterValue = 1;
   @Output() counterChange = new EventEmitter<number>();
   @Input()
   get counter() {return this.counterValue;}
